@@ -69,3 +69,4 @@
 - **Values:** Use built-in utility values first.
 - **Layout:** No `space-*` utilities. Use `flex`/`grid` with `gap-*` instead.
 - **Base Styles:** In `@layer base`, set `cursor: pointer` for enabled buttons and roles.
+- **Screen Height:** Prefer `dvh` (dynamic viewport height) over `vh` (viewport height) for better mobile browser compatibility.
