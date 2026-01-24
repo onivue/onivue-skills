@@ -2,7 +2,7 @@
 
 ## Setup & Configuration
 - **Required Scripts:** Ensure `package.json` includes:
-    - `"check": "biome check --write ."`
+    - `"check": "biome check --write .`"
     - `"typecheck": "tsc --noEmit"`
     - `"updates": "npx npm-check-updates --interactive --format group"`
 - **Install:** `bun install`
@@ -29,6 +29,7 @@
     - Files: `kebab-case`
     - Constants: `UPPER_CASE`
     - Classes: `PascalCase`
+- **Class Modifiers:** Prefer explicit modifiers (`public`, `private`, `static`) for class members to improve code clarity and maintainability.
 
 ## Code Quality
 - **Tooling:** Use Biome.js v2.3+ for linting and formatting (run via `bun check`).
@@ -39,7 +40,7 @@
 - **Syntax:** Use optional chaining (`?.`) and nullish coalescing (`??`).
 - **Dates:** Use `date-fns` for manipulation. Avoid native `Date` math.
 - **DRY:** No code duplication.
-- **Async:** Always use `async`/`await` and `try/catch`. Avoid `.then()`.
+- **Async:** Always use `async`/`await` and `try/catch`. Avoid `.then()`. 
 - **Formatting:** Use single quotes (configure Biome accordingly).
 - **Comments:** Short, simple, readable, and always in lowercase.
 
@@ -47,7 +48,7 @@
 - **Components:** Use shadcn/ui. Prefer `@base-ui/react` over `@radix-ui`. Always install via CLI.
 - **Rendering:** Strictly use ternary (`? : null`) or `!!value &&`. Never rely on `&&` with numbers/strings.
 - **Routing:** Use type-safe routing patterns. Never use hardcoded strings for internal navigation.
-- **Feedback:** Use `sonner` for toasts. Use Error Boundaries for crashes. Never use `alert()`.
+- **Feedback:** Use `sonner` for toasts. Use Error Boundaries for crashes. Never use `alert()`. 
 - **States:** Implement explicit `Loading` (Skeletons) and `Empty` states. Avoid layout shifts.
 - **Hooks:** Avoid `useEffect`. Never use `useMemo` or `useCallback`.
 - **Composition:** Prefer composition (children/slots) over configuration props.
