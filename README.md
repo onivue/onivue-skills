@@ -53,11 +53,26 @@
 ## React & UI
 
 - **Components:** Use shadcn/ui. Prefer `@base-ui/react` over `@radix-ui`. Always install via CLI.
+- **Test IDs:** Add `data-testid` to components for reliable element identification in the HTML structure — Tailwind class names alone are not sufficient to identify elements.
+- **Layout Components:** Encapsulate repeated layout patterns (header, content area, etc.) into dedicated layout components. Accept `className` and spread `...props` so they remain composable. Example:
+
+  ```tsx
+  function PageHeader({ className, ...props }: React.ComponentProps<"div">) {
+    return (
+      <div
+        className={cn("sticky top-0 z-10 flex h-12 items-center justify-between border-b border-border bg-background px-6", className)}
+        {...props}
+      />
+    );
+  }
+  ```
+
+- **Single Responsibility:** Each component does one thing. Extract logic into hooks, and layout into layout components when a component grows complex.
 - **Rendering:** Strictly use ternary (`? : null`) or `!!value &&`. Never rely on `&&` with numbers/strings.
 - **Routing:** Use type-safe routing patterns. Never use hardcoded strings for internal navigation.
 - **Feedback:** Use `sonner` for toasts. Use Error Boundaries for crashes. Never use `alert()`.
 - **States:** Implement explicit `Loading` (Skeletons) and `Empty` states. Avoid layout shifts.
-- **Hooks:** Avoid `useEffect`. Never use `useMemo` or `useCallback`.
+- **Hooks:** Avoid `useEffect`. Never use `useMemo` or `useCallback`. Use `debounce` for user input, search, and resize handlers where appropriate.
 - **Composition:** Prefer composition (children/slots) over configuration props.
 - **HTML:** Use semantic tags (`nav`, `main`) and ensure keyboard accessibility.
 
