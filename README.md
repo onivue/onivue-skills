@@ -96,3 +96,11 @@
 - **Layout:** No `space-*` utilities. Use `flex`/`grid` with `gap-*` instead.
 - **Base Styles:** In `@layer base`, set `cursor: pointer` for enabled buttons and roles.
 - **Screen Height:** Prefer `dvh` (dynamic viewport height) over `vh` (viewport height) for better mobile browser compatibility.
+
+## Mobile UX
+
+- **App-like behavior on mobile:** Bring the experience on mobile devices as close as possible to native app behavior. This includes preventing unintended zoom, respecting safe areas, optimizing touch interactions, and using the following viewport setting by default unless a documented exception is required:
+
+  ```html
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  ```
