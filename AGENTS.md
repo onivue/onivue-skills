@@ -75,7 +75,6 @@
 - **Hooks:** Avoid `useEffect`. Never use `useMemo` or `useCallback`. Use `debounce` for user input, search, and resize handlers where appropriate.
 - **Composition:** Prefer composition (children/slots) over configuration props.
 - **HTML:** Use semantic tags (`nav`, `main`) and ensure keyboard accessibility.
-- **Mobile App-Like UX:** On mobile devices, aim to match native app behavior as closely as possible. This includes preventing unintended zoom, respecting safe areas, optimizing touch interactions, and setting `<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">` as a required default unless a documented exception applies.
 
 ## Data & State
 
