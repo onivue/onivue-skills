@@ -22,7 +22,7 @@
 
 ## Architecture & Structure
 
-- **Feature-First:** Colocate components, hooks, and tests within feature folders (e.g., `components/features/auth/`).
+- **Feature-First:** Colocate components within feature folders (e.g., `components/features/auth/`).
 - **Services & Helpers:** Encapsulate all services, tools, and calculations in classes (e.g., `class APIService`, `class DateHelper`).
 - **API Layer:** Abstract calls into service classes. Return Discriminated Unions (`{ success: true, data: T } | { success: false, error: E }`) for strict result handling.
 - **Global Config:** Store app-wide constants and settings (e.g., app name) in a `config.ts` file.
